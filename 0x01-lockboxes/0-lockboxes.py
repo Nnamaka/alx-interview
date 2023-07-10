@@ -21,7 +21,7 @@ def canUnlockAll(boxes):
                     keyz.update(set(boxes[j]))
                     found = True
                     break
-            if found == False:
+            if found:
                 return False
 
     return True
