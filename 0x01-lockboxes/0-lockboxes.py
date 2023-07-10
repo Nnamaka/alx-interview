@@ -11,7 +11,7 @@ def canUnlockAll(boxes):
             keyz.update(set(boxes[i]))
         else :
             found = False
-            
+
             for j in keyz:
                 if j >= len(boxes):
                     continue
@@ -20,7 +20,7 @@ def canUnlockAll(boxes):
                     keyz.update(set(boxes[j]))
                     found = True
                     break
-            if found == False:
+            if found:
                 return False
             
     return True
