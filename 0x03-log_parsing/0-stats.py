@@ -5,13 +5,15 @@ import sys
 total_size = 0
 count = 0
 staticmethod = {'200': 0, '301': 0, '400': 0, '401': 0,
-         '403': 0, '404': 0, '405': 0, '500': 0}
+                '403': 0, '404': 0, '405': 0, '500': 0}
+
 
 def print_stat():
     print('File size: {}'.format(total_size))
     for key, value in sorted(staticmethod.items()):
         if value != 0:
             print('{}: {}'.format(key, value))
+
 
 try:
     for line in sys.stdin:
