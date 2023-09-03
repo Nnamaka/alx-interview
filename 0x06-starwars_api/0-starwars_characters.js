@@ -1,9 +1,9 @@
 #!/usr/bin/node
-const request = require("request");
+const request = require('request');
 
-const URL = "https://swapi-api.hbtn.io/api";
+const URL = 'https://swapi-api.hbtn.io/api';
 const MOVIE_ID = process.argv[2];
-const API_ENDPOINT = URL + "/films/" + MOVIE_ID;
+const API_ENDPOINT = URL + '/films/' + MOVIE_ID;
 
 if (MOVIE_ID) {
   request(API_ENDPOINT, (err, clbk, res) => {
@@ -22,7 +22,7 @@ if (MOVIE_ID) {
       );
 
       Promise.all(charNames)
-        .then((names) => console.log(names.join("\n")))
+        .then((names) => console.log(names.join('\n')));
     }
   });
 }
