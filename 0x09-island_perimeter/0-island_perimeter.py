@@ -34,10 +34,17 @@ def island_perimeter(grid):
 
 
     # calculate width and height
+    hi[0] = 0 if hi[0] == None else hi[0]
+    wi[0] = 0 if wi[0] == None else wi[0]
+
+
     height = (hi[1] - hi[0]) + 1
     width = (wi[1] - wi[0]) + 1
 
     # calculate perimeter
-    perimeter = height * 2 + width * 2
+    if height == 1 and width == 1:
+        perimeter = 0
+    else:
+        perimeter = height * 2 + width * 2
 
     return perimeter
