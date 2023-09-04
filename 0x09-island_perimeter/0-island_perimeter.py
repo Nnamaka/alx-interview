@@ -15,10 +15,9 @@ def island_perimeter(grid):
                 wi[0] = b
             elif wi[0] is not None and b < wi[0] and grid[a][b] == 1:
                 wi[0] = b
-            
+
             if b > wi[1] and grid[a][b] == 1:
                 wi[1] = b
-
 
     # height of grid
     for c in range(len(grid[0])):
@@ -28,15 +27,13 @@ def island_perimeter(grid):
                 hi[0] = d
             elif hi[0] is not None and d < hi[0] and grid[d][c] == 1:
                 hi[0] = d
-            
+
             if d > hi[1] and grid[d][c] == 1:
                 hi[1] = d
-
 
     # calculate width and height
     hi[0] = 0 if hi[0] is None else hi[0]
     wi[0] = 0 if wi[0] is None else wi[0]
-
 
     height = (hi[1] - hi[0]) + 1
     width = (wi[1] - wi[0]) + 1
