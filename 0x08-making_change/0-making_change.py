@@ -3,7 +3,7 @@
 
 def makeChange(coins, total):
     '''Make change from list of coins'''
-    if total == 0:
+    if total <= 0:
         return 0
     
     results = []
@@ -29,5 +29,5 @@ def makeChange(coins, total):
     
     if smallest == float('inf'):
         smallest = -1
-        
+
     return smallest
