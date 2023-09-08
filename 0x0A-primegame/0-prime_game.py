@@ -95,4 +95,4 @@ def isWinner(x, nums):
         else:
             break
 
-    print('Winner: {}'.format(player))
+    return player
