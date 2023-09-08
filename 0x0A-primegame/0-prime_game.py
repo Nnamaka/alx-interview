@@ -3,6 +3,7 @@
 
 player = 'Maria'
 
+
 def playerTurn():
     '''Change turns of player'''
     global player
@@ -13,17 +14,17 @@ def playerTurn():
         player = 'Maria'
 
 
-def isPrime( num ):
+def isPrime(num):
     '''check if number is prime number'''
     check = int(num/2)
-    
+
     if num > 1:
-        div = int(num / 2) 
+        div = int(num / 2)
 
         while div != 1:
             if num % div == 0:
                 return False
-            
+
             div -= 1
         return True
 
@@ -37,7 +38,7 @@ def optimalCount(a, arr):
     for b in arr:
         if b % a == 0:
             count += 1
-    
+
     return count
 
 
@@ -49,17 +50,17 @@ def pickPrime(arr):
         if isPrime(a):
             count = optimalCount(a, arr)
             choose.append((a, count))
-    
+
     # check if a prime number was picked
     if not choose:
         return -1
 
     max = 0
-    
+
     for a in choose:
         if a[1] > max:
             max = a[1]
-    
+
     for a in choose:
         if a[1] == max:
             return a[0]
@@ -75,7 +76,7 @@ def removePick(a, arr):
     no_rem = len(remove)
     arrr = len(arr)
 
-    while( len(arr) != (arrr - no_rem)):
+    while(len(arr) != (arrr - no_rem)):
         for a in remove:
             for i in range(len(arr)):
                 if a == arr[i]:
@@ -93,6 +94,5 @@ def isWinner(x, nums):
             playerTurn()
         else:
             break
-    
+
     print('Winner: {}'.format(player))
-    
