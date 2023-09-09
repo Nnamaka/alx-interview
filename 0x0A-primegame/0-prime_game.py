@@ -113,5 +113,5 @@ def isWinner(x, nums):
 
     if played == 0:
         return None
-    
+
     return player
