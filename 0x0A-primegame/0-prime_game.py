@@ -16,9 +16,10 @@ def playerTurn():
 
 def isPrime(num):
     '''check if number is prime number'''
-    check = int(num/2)
 
     if num > 1:
+        # make absolute
+        # num = abs(num)
         div = int(num / 2)
 
         while div != 1:
@@ -69,6 +70,10 @@ def pickPrime(arr):
 def removePick(a, arr):
     '''remove prime number and its mutiples'''
     remove = []
+
+    # absolute
+    # a = abs(a)
+
     for i in range(len(arr)):
         if arr[i] % a == 0:
             remove.append(arr[i])
