@@ -104,6 +104,7 @@ def isWinner(x, nums):
         else:
             break
 
+<<<<<<< HEAD
         x -= 1
 
     if played == 0:
@@ -112,3 +113,6 @@ def isWinner(x, nums):
     return player
 
 # print("Winner: {}".format(isWinner(6, [1, 1, 0, 0, 1, 8])))
+=======
+    return player
+>>>>>>> 1e0ad0ce1ca60d1d33b1a9bbd149cc80e7ba56ec
