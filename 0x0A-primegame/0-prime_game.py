@@ -86,13 +86,29 @@ def removePick(a, arr):
 
 def isWinner(x, nums):
     '''Prime game function'''
-    while x != 0:
+    # if pick is -1 return  None
+    # check nums is none and x is greater than 0
+
+    played = 0
+    numbers = len(nums)
+
+    while x > 0:
         pick = pickPrime(nums)
 
         if pick != -1:
             removePick(pick, nums)
             playerTurn()
+
+            if len(nums) < numbers:
+                played = 1
         else:
             break
 
+        x -= 1
+
+    if played == 0:
+        return None
+    
     return player
+
+# print("Winner: {}".format(isWinner(6, [1, 1, 0, 0, 1, 8])))
